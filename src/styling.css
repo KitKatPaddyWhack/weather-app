@@ -6,6 +6,14 @@ h1 {
   font-weight: 900;
   font-size: 55px;
 }
+a {
+  text-decoration: none;
+  color: #ffb3d5;
+}
+a:hover {
+  color: #ff80ba;
+}
+
 .btn-outline-dark {
   padding: 0.1rem 0.5rem;
 }
