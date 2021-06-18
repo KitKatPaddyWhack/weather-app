@@ -1,0 +1,72 @@
+Body {
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+}
+h1 {
+  font-weight: 900;
+  font-size: 55px;
+}
+.btn-outline-dark {
+  padding: 0.1rem 0.5rem;
+}
+.card {
+  margin: 20px auto 0px;
+  background-color: rgb(223, 213, 211, 0.3);
+}
+.top-split-left {
+  text-align: left;
+}
+.additional-info {
+  text-align: left;
+}
+.main-weather-image {
+  font-size: 50px;
+  text-align: left;
+}
+
+.temperature-today,
+.daily-temp {
+  color: rgb(90, 98, 118, 0.8);
+}
+.card-title {
+  color: rgb(90, 98, 118);
+}
+.card-subtitle {
+  margin-top: 15px;
+}
+
+.temperature-today {
+  margin-left: 5px;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.todays-date {
+  color: rgb(90, 98, 118);
+}
+.precipitation-percent,
+.humidity-percent {
+  margin-top: 8px;
+}
+
+#celsius-link {
+  text-decoration: none;
+  color: rgb(140, 168, 216);
+}
+#fahrenheit-link {
+  text-decoration: none;
+  color: rgb(140, 168, 216);
+}
+#temperature-display {
+  font-size: 20px;
+}
+#current-temperature-display {
+  font-weight: 900;
+  font-size: 30px;
+}
+#degrees-display {
+  font-weight: 900;
+  font-size: 30px;
+}
+#search-form {
+  display: inline;
+}
