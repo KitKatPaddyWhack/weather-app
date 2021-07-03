@@ -64,14 +64,14 @@ a:hover {
   text-decoration: none;
   color: rgb(140, 168, 216);
 }
-#temperature-display {
+#celsius-fahrenheit {
   font-size: 20px;
 }
 #current-temperature-display {
   font-weight: 900;
   font-size: 30px;
 }
-#degrees-display {
+#degree-symbol {
   font-weight: 900;
   font-size: 30px;
 }

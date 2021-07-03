@@ -35,11 +35,10 @@ let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
 todaysDate.innerHTML = `${dayOfWeek}, ${dayOfMonth} ${currentMonth} ${hours}:${minutes}`;
 
 function showWeather(response) {
-  let temperatureRounded = Math.round(response.data.main.temp);
   let celsiusTempAccurate = document.querySelector(
     "#current-temperature-display"
   );
-  celsiusTempAccurate.innerHTML = `${temperatureRounded}`;
+  celsiusTempAccurate.innerHTML = Math.round(response.data.main.temp);
 
   let humidity = document.querySelector(".humidity-percent");
   humidity.innerHTML = `${response.data.main.humidity}%`;
