@@ -1,3 +1,5 @@
+let apiKey = "ca59aacb9fbee84aa3a91b01d188e669";
+
 let todaysDate = document.querySelector(".todays-date");
 let now = new Date();
 
@@ -52,7 +54,7 @@ function search(event) {
   let searchInput = document.querySelector("#text-input");
   let h1 = document.querySelector("h1");
   h1.innerHTML = searchInput.value.toUpperCase();
-  let apiKey = "ca59aacb9fbee84aa3a91b01d188e669";
+
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showWeather);
@@ -92,7 +94,6 @@ function showCoordWeather(response) {
 function getLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let apiKey = "ca59aacb9fbee84aa3a91b01d188e669";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
 
