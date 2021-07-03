@@ -26,6 +26,7 @@ a:hover {
 }
 .additional-info {
   text-align: left;
+  margin-top: 8px;
 }
 .main-weather-image {
   font-size: 50px;
@@ -35,8 +36,7 @@ a:hover {
 .temperature-today,
 .daily-temp,
 .todays-date,
-.card-title,
-.current-weather-description {
+.card-title {
   color: rgb(90, 98, 118, 0.8);
 }
 
@@ -50,9 +50,15 @@ a:hover {
   margin-bottom: 0;
 }
 
-.precipitation-percent,
-.humidity-percent {
-  margin-top: 8px;
+#current-weather-description {
+  color: rgb(90, 98, 118, 0.8);
+  text-transform: capitalize;
+}
+
+#precipitation-percent,
+#humidity-percent,
+#wind-speed {
+  margin-top: 10px;
 }
 
 #celsius-link,

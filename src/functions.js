@@ -40,12 +40,17 @@ function showWeather(response) {
   );
   celsiusTempAccurate.innerHTML = Math.round(response.data.main.temp);
 
-  let humidity = document.querySelector(".humidity-percent");
+  let humidity = document.querySelector("#humidity-percent");
   humidity.innerHTML = `${response.data.main.humidity}%`;
 
   let windSpeedRounded = Math.round(response.data.wind.speed);
-  let windSpeed = document.querySelector(".wind-speed");
+  let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = `${windSpeedRounded} m/s`;
+
+  let weatherDescription = document.querySelector(
+    "#current-weather-description"
+  );
+  weatherDescription.innerHTML = `${response.data.weather[0].description}`;
 }
 
 function search(event) {
@@ -82,12 +87,17 @@ function showCoordWeather(response) {
   );
   celsiusTempAccurate.innerHTML = `${temperatureRounded}`;
 
-  let humidity = document.querySelector(".humidity-percent");
+  let humidity = document.querySelector("#humidity-percent");
   humidity.innerHTML = `${response.data.main.humidity}%`;
 
   let windSpeedRounded = Math.round(response.data.wind.speed);
-  let windSpeed = document.querySelector(".wind-speed");
+  let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = `${windSpeedRounded} m/s`;
+
+  let weatherDescription = document.querySelector(
+    "#current-weather-description"
+  );
+  weatherDescription.innerHTML = `${response.data.weather[0].description}`;
 }
 
 function getLocation(position) {
