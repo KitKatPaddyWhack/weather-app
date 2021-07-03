@@ -55,7 +55,6 @@ a:hover {
   text-transform: capitalize;
 }
 
-#precipitation-percent,
 #humidity-percent,
 #wind-speed {
   margin-top: 10px;
