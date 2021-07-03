@@ -27,11 +27,9 @@ let months = [
 ];
 let currentMonth = months[now.getMonth()];
 let dayOfMonth = now.getDate();
-let hours = now.getHours();
+let hours = (now.getHours() < 10 ? "0" : "") + now.getHours();
 let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
+
 todaysDate.innerHTML = `${dayOfWeek}, ${dayOfMonth} ${currentMonth} ${hours}:${minutes}`;
 
 function showWeather(response) {
