@@ -33,14 +33,15 @@ a:hover {
 }
 
 .temperature-today,
-.daily-temp {
+.daily-temp,
+.todays-date,
+.card-title,
+.current-weather-description {
   color: rgb(90, 98, 118, 0.8);
 }
-.card-title {
-  color: rgb(90, 98, 118);
-}
+
 .card-subtitle {
-  margin-top: 38px;
+  margin-top: 30px;
 }
 
 .temperature-today {
@@ -48,33 +49,27 @@ a:hover {
   font-size: 16px;
   margin-bottom: 0;
 }
-.todays-date {
-  color: rgb(90, 98, 118);
-}
+
 .precipitation-percent,
 .humidity-percent {
   margin-top: 8px;
 }
 
-#celsius-link {
-  text-decoration: none;
-  color: rgb(140, 168, 216);
-}
+#celsius-link,
 #fahrenheit-link {
   text-decoration: none;
   color: rgb(140, 168, 216);
 }
+
 #celsius-fahrenheit {
   font-size: 20px;
 }
-#current-temperature-display {
-  font-weight: 900;
-  font-size: 30px;
-}
+#current-temperature-display,
 #degree-symbol {
   font-weight: 900;
   font-size: 30px;
 }
+
 #search-form {
   display: inline;
 }
