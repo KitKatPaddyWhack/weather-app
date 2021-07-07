@@ -19,7 +19,7 @@ a:hover {
 }
 .card {
   margin: 20px auto 0px;
-  background-color: rgb(223, 213, 211, 0.3);
+  background-color: rgb(204, 204, 204, 0.7);
 }
 .top-split-left {
   text-align: left;
@@ -28,7 +28,7 @@ a:hover {
   text-align: left;
   margin-top: 8px;
 }
-.main-weather-image {
+#main-weather-icon {
   font-size: 50px;
   text-align: left;
 }
