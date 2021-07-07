@@ -19,7 +19,7 @@ a:hover {
 }
 .card {
   margin: 20px auto 0px;
-  background-color: rgb(204, 204, 204, 0.7);
+  background-color: rgb(212, 174, 186, 0.3);
 }
 .top-split-left {
   text-align: left;
@@ -69,7 +69,7 @@ a:hover {
 #celsius-fahrenheit {
   font-size: 20px;
 }
-#current-temperature-display,
+#current-temperature,
 #degree-symbol {
   font-weight: 900;
   font-size: 30px;

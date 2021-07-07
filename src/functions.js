@@ -39,10 +39,10 @@ let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
 todaysDate.innerHTML = `${dayOfWeek}, ${dayOfMonth} ${currentMonth} ${hours}:${minutes}`;
 
 function showWeather(response) {
-  let celsiusTempAccurate = document.querySelector(
-    "#current-temperature-display"
-  );
+  let celsiusTempAccurate = document.querySelector("#current-temperature");
   celsiusTempAccurate.innerHTML = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp;
 
   let humidity = document.querySelector("#humidity-percent");
   humidity.innerHTML = `${response.data.main.humidity}%`;
@@ -83,11 +83,12 @@ button.addEventListener("click", search);
 
 function displayFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitConversion = document.querySelector(
-    "#current-temperature-display"
-  );
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#current-temperature");
 
-  fahrenheitConversion.innerHTML = `50`;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+let celsiusTemperature = null;
 let fahrenheitTemperature = document.querySelector("#fahrenheit-link");
 fahrenheitTemperature.addEventListener("click", displayFahrenheit);
