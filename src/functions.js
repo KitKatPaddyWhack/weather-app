@@ -1,4 +1,6 @@
 let apiKey = "ca59aacb9fbee84aa3a91b01d188e669";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(showWeather);
 
 let todaysDate = document.querySelector(".todays-date");
 let now = new Date();
@@ -67,6 +69,9 @@ function search(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
+let button = document.querySelector("button");
+button.addEventListener("click", search);
+
 function displayFahrenheit(event) {
   event.preventDefault();
   let fahrenheitConversion = document.querySelector(
@@ -77,6 +82,3 @@ function displayFahrenheit(event) {
 }
 let fahrenheitTemperature = document.querySelector("#fahrenheit-link");
 fahrenheitTemperature.addEventListener("click", displayFahrenheit);
-
-let button = document.querySelector("button");
-button.addEventListener("click", search);
