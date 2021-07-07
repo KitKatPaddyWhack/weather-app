@@ -1,5 +1,7 @@
 let apiKey = "ca59aacb9fbee84aa3a91b01d188e669";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=${apiKey}&units=metric`;
+let city = "Tokyo";
+let units = "metric";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(showWeather);
 
 let todaysDate = document.querySelector(".todays-date");
