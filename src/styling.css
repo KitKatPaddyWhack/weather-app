@@ -47,7 +47,11 @@ a:hover {
 }
 
 .todays-display {
-  padding-top: 39px;
+  padding-top: 26px;
+}
+
+.todays-display-top {
+  padding-bottom: 13px;
 }
 
 #main-weather-icon {

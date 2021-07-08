@@ -48,22 +48,27 @@
             <div class="col-6">
               <div class="row top-right-split">
                 <div class="col-6">
-                  <img id="main-weather-icon"></img>
+                  <img id="main-weather-icon" />
                   <p class="additional-info">Wind Speed</p>
                   <p class="additional-info">Humidity</p>
                 </div>
                 <div class="col-6 todays-display">
-                  <span class="todays-display-top">
-                  <p class="temperature-today">21°/15°</p>
-                  <span id="current-temperature"></span
-                  ><span id="degree-symbol">°</span>
-                  <span id="celsius-fahrenheit"
-                    ><a href="#"  id="celsius-link" class="active">C</a> |
-                    <a href="#" id="fahrenheit-link">F</a></span>
-                  </span>
+                  <div class="todays-display-top">
+                    <p class="temperature-today">
+                      <span id="todays-max-temperature"></span>°/<span
+                        id="todays-min-temperature"
+                        >15</span
+                      >°
+                    </p>
+                    <span id="current-temperature"></span
+                    ><span id="degree-symbol">°</span>
+                    <span id="celsius-fahrenheit"
+                      ><a href="#" id="celsius-link" class="active">C</a> |
+                      <a href="#" id="fahrenheit-link">F</a></span
+                    >
+                  </div>
                   <p id="wind-speed">m/s</p>
                   <p id="humidity-percent"></p>
-                 
                 </div>
               </div>
             </div>
