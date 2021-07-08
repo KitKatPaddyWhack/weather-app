@@ -7,6 +7,15 @@ h1 {
   font-size: 55px;
 }
 
+a {
+  color: rgb(224, 139, 208);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(155, 90, 143);
+}
+
 #celsius-link,
 #fahrenheit-link {
   text-decoration: none;
@@ -26,7 +35,7 @@ h1 {
 }
 .card {
   margin: 20px auto 0px;
-  background-color: rgb(212, 174, 186, 0.3);
+  background-color: rgb(109, 109, 109, 0.35);
 }
 .top-split-left {
   text-align: left;
@@ -34,10 +43,18 @@ h1 {
 .additional-info {
   text-align: left;
   margin-top: 8px;
+  margin-left: 25px;
 }
+
+.todays-display {
+  padding-top: 39px;
+}
+
 #main-weather-icon {
   font-size: 50px;
   text-align: left;
+  padding-top: 10px;
+  padding-right: 5px;
 }
 
 .temperature-today,
