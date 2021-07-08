@@ -7,12 +7,18 @@ h1 {
   font-size: 55px;
 }
 
-a {
+#celsius-link,
+#fahrenheit-link {
   text-decoration: none;
-  color: #ffb3d5;
 }
-a:hover {
-  color: #ff80ba;
+
+#celsius-fahrenheit .active {
+  color: black;
+  cursor: default;
+}
+
+#celsius-fahrenheit .active:hover {
+  text-decoration: none;
 }
 
 .btn-outline-dark {
@@ -59,12 +65,6 @@ a:hover {
 #humidity-percent,
 #wind-speed {
   margin-top: 10px;
-}
-
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
-  color: rgb(140, 168, 216);
 }
 
 #celsius-fahrenheit {
