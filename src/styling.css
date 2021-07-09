@@ -8,12 +8,12 @@ h1 {
 }
 
 a {
-  color: rgb(224, 139, 208);
+  color: rgb(230, 115, 159);
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(155, 90, 143);
+  color: rgb(163, 68, 103);
 }
 
 #celsius-link,
@@ -32,10 +32,11 @@ a:hover {
 
 .btn-outline-dark {
   padding: 0.1rem 0.5rem;
+  background-color: rgb(175, 193, 211);
 }
 .card {
   margin: 20px auto 0px;
-  background-color: rgb(109, 109, 109, 0.35);
+  background-color: rgb(200, 217, 235, 0.8);
 }
 .top-split-left {
   text-align: left;
