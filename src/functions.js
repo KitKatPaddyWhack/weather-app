@@ -43,20 +43,33 @@ function getForecast(coordinates) {
   axios.get(apiURL).then(displayForecast);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
-  let days = ["SAT", "SUN", "MON", "TUE", "WED"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col days">
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 4)
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-3 days">
               <div class="card border-light mb-3" style="max-width: 18rem">
                 <div class="card-body">
-                  <h5 class="card-title">${day}</h5>
-                  <p class="daily-temp">25°/14°</p>
-                  <p class="card-text"><i class="fas fa-cloud"></i></p>
+                  <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
+                  <p class="daily-temp">${Math.round(
+                    forecastDay.temp.min
+                  )}°/${Math.round(forecastDay.temp.max)}°</p>
+                  <p class="card-text">
+                  <img src="http://openweathermap.org/img/wn/${
+                    forecastDay.weather[0].icon
+                  }@2x.png" /></p>
                 </div>
               </div>
             </div>
