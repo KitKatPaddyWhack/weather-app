@@ -35,8 +35,16 @@ let currentMonth = months[now.getMonth()];
 let dayOfMonth = now.getDate();
 let hours = (now.getHours() < 10 ? "0" : "") + now.getHours();
 let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
+todaysDate.innerHTML = `${dayOfWeek}, ${dayOfMonth} ${currentMonth} ${hours}:${minutes}`;
 
-function displayForecast() {
+function getForecast(coordinates) {
+  let apiKey = "ca59aacb9fbee84aa3a91b01d188e669";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
   let days = ["SAT", "SUN", "MON", "TUE", "WED"];
@@ -56,8 +64,6 @@ function displayForecast() {
   });
   forecastElement.innerHTML = forecastHTML;
 }
-
-todaysDate.innerHTML = `${dayOfWeek}, ${dayOfMonth} ${currentMonth} ${hours}:${minutes}`;
 
 function showWeather(response) {
   let celsiusTempAccurate = document.querySelector("#current-temperature");
@@ -90,7 +96,7 @@ function showWeather(response) {
   let maxTemp = document.querySelector("#todays-max-temperature");
   maxTemp.innerHTML = Math.round(response.data.main.temp_min);
 
-  displayForecast();
+  getForecast(response.data.coord);
 }
 
 function search(event) {
