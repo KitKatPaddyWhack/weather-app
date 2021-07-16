@@ -36,6 +36,27 @@ let dayOfMonth = now.getDate();
 let hours = (now.getHours() < 10 ? "0" : "") + now.getHours();
 let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["SAT", "SUN", "MON", "TUE", "WED"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col days">
+              <div class="card border-light mb-3" style="max-width: 18rem">
+                <div class="card-body">
+                  <h5 class="card-title">${day}</h5>
+                  <p class="daily-temp">25°/14°</p>
+                  <p class="card-text"><i class="fas fa-cloud"></i></p>
+                </div>
+              </div>
+            </div>
+           `;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 todaysDate.innerHTML = `${dayOfWeek}, ${dayOfMonth} ${currentMonth} ${hours}:${minutes}`;
 
 function showWeather(response) {
@@ -68,6 +89,8 @@ function showWeather(response) {
 
   let maxTemp = document.querySelector("#todays-max-temperature");
   maxTemp.innerHTML = Math.round(response.data.main.temp_min);
+
+  displayForecast();
 }
 
 function search(event) {
