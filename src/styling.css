@@ -1,6 +1,7 @@
 Body {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
+  background-color: rgb(200, 217, 235, 0.8);
 }
 h1 {
   font-weight: 900;
@@ -22,7 +23,6 @@ a:hover {
 }
 .card {
   margin: 20px auto 0px;
-  background-color: rgb(200, 217, 235, 0.8);
 }
 .top-split-left {
   text-align: left;
@@ -34,11 +34,11 @@ a:hover {
 }
 
 .todays-display {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .todays-display-top {
-  padding-bottom: 13px;
+  padding-bottom: 23px;
 }
 
 #main-weather-icon {
