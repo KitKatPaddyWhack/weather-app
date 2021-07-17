@@ -56,7 +56,7 @@ function displayForecast(response) {
   let forecastHTML = "";
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 4)
+    if (index < 5)
       forecastHTML =
         forecastHTML +
         `<div class="col-3 days">
@@ -103,12 +103,6 @@ function showWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  let minTemp = document.querySelector("#todays-min-temperature");
-  minTemp.innerHTML = Math.round(response.data.main.temp_max);
-
-  let maxTemp = document.querySelector("#todays-max-temperature");
-  maxTemp.innerHTML = Math.round(response.data.main.temp_min);
-
   getForecast(response.data.coord);
 }
 
@@ -128,28 +122,3 @@ form.addEventListener("submit", search);
 
 let button = document.querySelector("button");
 button.addEventListener("click", search);
-
-function displayFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#current-temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-let celsiusTemperature = null;
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheit);
-
-function displayCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsius);
