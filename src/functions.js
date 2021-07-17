@@ -56,7 +56,7 @@ function displayForecast(response) {
   let forecastHTML = "";
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5)
+    if (index < 4)
       forecastHTML =
         forecastHTML +
         `<div class="col-3 days">
@@ -72,7 +72,7 @@ function displayForecast(response) {
                   }@2x.png" /></p>
                 </div>
               </div>
-            </div>
+         </div>
            `;
   });
   forecastElement.innerHTML = forecastHTML;
