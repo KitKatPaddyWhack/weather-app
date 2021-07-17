@@ -16,20 +16,6 @@ a:hover {
   color: rgb(163, 68, 103);
 }
 
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
-}
-
-#celsius-fahrenheit .active {
-  color: black;
-  cursor: default;
-}
-
-#celsius-fahrenheit .active:hover {
-  text-decoration: none;
-}
-
 .btn-outline-dark {
   padding: 0.1rem 0.5rem;
   background-color: rgb(175, 193, 211);
@@ -89,9 +75,6 @@ a:hover {
   margin-top: 10px;
 }
 
-#celsius-fahrenheit {
-  font-size: 20px;
-}
 #current-temperature,
 #degree-symbol {
   font-weight: 900;
