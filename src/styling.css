@@ -73,18 +73,23 @@ a:hover {
 #main-weather-icon {
   font-size: 50px;
   text-align: left;
-  padding-top: 10px;
+  padding-top: 12px;
   padding-right: 5px;
+}
+
+.city {
+  margin-top: 22px;
 }
 
 #current-weather-description {
   color: rgb(90, 98, 118, 0.8);
   text-transform: capitalize;
+  margin-top: 21px;
 }
 
 #humidity-percent,
 #wind-speed {
-  margin-top: 10px;
+  margin-top: 13px;
 }
 
 #current-temperature,
