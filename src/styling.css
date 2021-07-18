@@ -19,8 +19,8 @@ a:hover {
 
 .btn-outline-dark {
   padding: 0.1rem 0.5rem;
-  background-color: rgb(175, 193, 211);
-  box-shadow: 3px 3px 3px rgb(175, 193, 211, 0.5);
+  background-color: rgb(175, 193, 211, 0.5);
+  box-shadow: 3px 3px 3px rgb(175, 193, 211, 0.8);
 }
 .card {
   margin: 20px auto 0px;
@@ -37,24 +37,22 @@ a:hover {
 }
 
 .todays-display {
-  padding-top: 40px;
+  padding-top: 59px;
 }
 
 .todays-display-top {
   padding-bottom: 23px;
 }
 
-#main-weather-icon {
-  font-size: 50px;
-  text-align: left;
-  padding-top: 10px;
-  padding-right: 5px;
+.icon-and-words {
+  padding-top: 20px;
 }
 
 .temperature-today,
 .daily-temp,
 .todays-date,
-.card-title {
+.last-updated,
+.additional-info {
   color: rgb(90, 98, 118, 0.8);
 }
 
@@ -70,6 +68,13 @@ a:hover {
 
 .github-link {
   position: relative;
+}
+
+#main-weather-icon {
+  font-size: 50px;
+  text-align: left;
+  padding-top: 10px;
+  padding-right: 5px;
 }
 
 #current-weather-description {
